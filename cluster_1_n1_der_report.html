@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html><head>
+<title>Cluster 1 - Contingency N-1 DER Implementation</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { color: #2c3e50; border-bottom: 3px solid #3498db; }
+h2 { color: #34495e; border-left: 4px solid #3498db; padding-left: 15px; }
+table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background-color: #3498db; color: white; }
+.summary-box { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0; }
+.der-pv { background-color: #fff3cd; }
+.der-bess { background-color: #d4edda; }
+.der-diesel { background-color: #f8d7da; }
+.metric { display: inline-block; margin: 10px; padding: 10px; background-color: #e9ecef; border-radius: 5px; text-align: center; min-width: 100px; }
+.emergency { background-color: #e74c3c; color: white; }
+.critical { background-color: #f39c12; color: white; }
+.commercial { background-color: #3498db; color: white; }
+.residential { background-color: #27ae60; color: white; }
+</style>
+</head><body>
+<h1>DER Implementation Report</h1>
+<h2>Cluster 1 - Contingency Level N-1</h2>
+<div class="summary-box">
+<h3>Implementation Summary</h3>
+<div class="metric"><strong>669</strong><br>Nodes</div>
+<div class="metric"><strong>15.0 kW</strong><br>Total PV</div>
+<div class="metric"><strong>8.6 kW</strong><br>Total BESS</div>
+<div class="metric"><strong>65.5 kWh</strong><br>BESS Energy</div>
+<div class="metric"><strong>14.1 kW</strong><br>Total Diesel</div>
+</div>
+<h2>Cluster Information</h2>
+<div class="summary-box">
+<h3>Cluster 1 Overview</h3>
+<p><strong>Total Nodes:</strong> 669</p>
+<p><strong>Total Load:</strong> 1668.50 kW</p>
+<h3>Load Classification Breakdown</h3>
+<table>
+<tr><th>Load Category</th><th>Load (kW)</th><th>% of Cluster</th><th>Nodes</th><th>% of Nodes</th></tr>
+<tr class="emergency"><td>Emergency</td><td>270.29</td><td>16.2%</td><td>7</td><td>1.0%</td></tr>
+<tr class="critical"><td>Critical/Industrial</td><td>663.30</td><td>39.8%</td><td>40</td><td>6.0%</td></tr>
+<tr class="commercial"><td>Commercial</td><td>413.01</td><td>24.8%</td><td>45</td><td>6.7%</td></tr>
+<tr class="residential"><td>Residential</td><td>321.89</td><td>19.3%</td><td>577</td><td>86.2%</td></tr>
+</table>
+</div>
+<h2>Detailed Node-by-Node DER Implementation</h2>
+<table>
+<tr><th>Node ID</th><th>Unserved Load (kW)</th><th>TACDS Factor</th><th>PV Capacity (kW)</th><th>BESS Power (kW)</th><th>BESS Energy (kWh)</th><th>Diesel Capacity (kW)</th><th>Total DER (kW)</th><th>DER Technologies</th></tr>
+<tr><td>13</td><td>3.77</td><td>0.238</td><td class="der-pv">0.22</td><td class="der-bess">0.12</td><td class="der-bess">0.74</td><td class="der-diesel">0.28</td><td><strong>0.62</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>14</td><td>2.58</td><td>0.236</td><td class="der-pv">0.15</td><td class="der-bess">0.08</td><td class="der-bess">0.51</td><td class="der-diesel">0.19</td><td><strong>0.42</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>15</td><td>3.79</td><td>0.238</td><td class="der-pv">0.22</td><td class="der-bess">0.12</td><td class="der-bess">0.75</td><td class="der-diesel">0.28</td><td><strong>0.62</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>16</td><td>1.40</td><td>0.234</td><td class="der-pv">0.09</td><td class="der-bess">0.05</td><td class="der-bess">0.48</td><td class="der-diesel">0.02</td><td><strong>0.16</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>27</td><td>1.01</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.35</td><td class="der-diesel">0.01</td><td><strong>0.11</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>59</td><td>1.81</td><td>0.234</td><td class="der-pv">0.12</td><td class="der-bess">0.06</td><td class="der-bess">0.62</td><td class="der-diesel">0.03</td><td><strong>0.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>61</td><td>2.46</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.48</td><td class="der-diesel">0.18</td><td><strong>0.40</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>62</td><td>2.46</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.48</td><td class="der-diesel">0.18</td><td><strong>0.40</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>63</td><td>2.46</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.48</td><td class="der-diesel">0.18</td><td><strong>0.40</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>73</td><td>3.23</td><td>0.237</td><td class="der-pv">0.18</td><td class="der-bess">0.11</td><td class="der-bess">0.63</td><td class="der-diesel">0.24</td><td><strong>0.53</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>74</td><td>3.23</td><td>0.237</td><td class="der-pv">0.18</td><td class="der-bess">0.11</td><td class="der-bess">0.63</td><td class="der-diesel">0.24</td><td><strong>0.53</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>75</td><td>3.23</td><td>0.237</td><td class="der-pv">0.18</td><td class="der-bess">0.11</td><td class="der-bess">0.63</td><td class="der-diesel">0.24</td><td><strong>0.53</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>97</td><td>2.55</td><td>0.236</td><td class="der-pv">0.15</td><td class="der-bess">0.08</td><td class="der-bess">0.50</td><td class="der-diesel">0.19</td><td><strong>0.42</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>98</td><td>2.55</td><td>0.236</td><td class="der-pv">0.15</td><td class="der-bess">0.08</td><td class="der-bess">0.50</td><td class="der-diesel">0.19</td><td><strong>0.42</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>99</td><td>2.55</td><td>0.236</td><td class="der-pv">0.15</td><td class="der-bess">0.08</td><td class="der-bess">0.50</td><td class="der-diesel">0.19</td><td><strong>0.42</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>100</td><td>2.53</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.49</td><td class="der-diesel">0.19</td><td><strong>0.41</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>101</td><td>2.53</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.49</td><td class="der-diesel">0.19</td><td><strong>0.41</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>102</td><td>2.53</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.49</td><td class="der-diesel">0.19</td><td><strong>0.41</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>124</td><td>1.06</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>125</td><td>1.06</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>126</td><td>1.06</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>141</td><td>1.13</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.39</td><td class="der-diesel">0.02</td><td><strong>0.13</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>153</td><td>1.10</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.38</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>159</td><td>2.09</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.72</td><td class="der-diesel">0.03</td><td><strong>0.24</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>162</td><td>0.91</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>190</td><td>1.68</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.58</td><td class="der-diesel">0.02</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>191</td><td>2.23</td><td>0.235</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.77</td><td class="der-diesel">0.03</td><td><strong>0.25</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>205</td><td>2.03</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.70</td><td class="der-diesel">0.03</td><td><strong>0.23</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>206</td><td>2.06</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.71</td><td class="der-diesel">0.03</td><td><strong>0.23</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>207</td><td>2.03</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.70</td><td class="der-diesel">0.03</td><td><strong>0.23</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>211</td><td>1.89</td><td>0.234</td><td class="der-pv">0.12</td><td class="der-bess">0.07</td><td class="der-bess">0.65</td><td class="der-diesel">0.03</td><td><strong>0.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>212</td><td>1.75</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.60</td><td class="der-diesel">0.03</td><td><strong>0.20</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>213</td><td>1.97</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.68</td><td class="der-diesel">0.03</td><td><strong>0.22</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>235</td><td>1.70</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>236</td><td>1.70</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>237</td><td>1.70</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>238</td><td>2.79</td><td>0.236</td><td class="der-pv">0.16</td><td class="der-bess">0.09</td><td class="der-bess">0.55</td><td class="der-diesel">0.20</td><td><strong>0.46</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>294</td><td>1.25</td><td>0.234</td><td class="der-pv">0.08</td><td class="der-bess">0.04</td><td class="der-bess">0.43</td><td class="der-diesel">0.02</td><td><strong>0.14</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>325</td><td>6.76</td><td>0.245</td><td class="der-pv">0.34</td><td class="der-bess">0.26</td><td class="der-bess">0.52</td><td class="der-diesel">1.20</td><td><strong>1.81</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>326</td><td>6.76</td><td>0.245</td><td class="der-pv">0.34</td><td class="der-bess">0.26</td><td class="der-bess">0.52</td><td class="der-diesel">1.20</td><td><strong>1.81</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>327</td><td>6.76</td><td>0.245</td><td class="der-pv">0.34</td><td class="der-bess">0.26</td><td class="der-bess">0.52</td><td class="der-diesel">1.20</td><td><strong>1.81</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>362</td><td>0.90</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>379</td><td>1.49</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.51</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>380</td><td>1.49</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.51</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>381</td><td>1.49</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.51</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>412</td><td>1.69</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.58</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>459</td><td>1.71</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>750</td><td>1.75</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.60</td><td class="der-diesel">0.03</td><td><strong>0.20</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>825</td><td>0.89</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1160</td><td>1.11</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.38</td><td class="der-diesel">0.02</td><td><strong>0.13</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1161</td><td>1.19</td><td>0.234</td><td class="der-pv">0.08</td><td class="der-bess">0.04</td><td class="der-bess">0.41</td><td class="der-diesel">0.02</td><td><strong>0.13</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1243</td><td>1.22</td><td>0.234</td><td class="der-pv">0.08</td><td class="der-bess">0.04</td><td class="der-bess">0.42</td><td class="der-diesel">0.02</td><td><strong>0.14</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1244</td><td>1.62</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.06</td><td class="der-bess">0.56</td><td class="der-diesel">0.02</td><td><strong>0.18</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1245</td><td>1.62</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.06</td><td class="der-bess">0.56</td><td class="der-diesel">0.02</td><td><strong>0.18</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1345</td><td>1.07</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1347</td><td>1.07</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1642</td><td>5.23</td><td>0.242</td><td class="der-pv">0.26</td><td class="der-bess">0.20</td><td class="der-bess">0.39</td><td class="der-diesel">0.92</td><td><strong>1.38</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1643</td><td>5.23</td><td>0.242</td><td class="der-pv">0.26</td><td class="der-bess">0.20</td><td class="der-bess">0.39</td><td class="der-diesel">0.92</td><td><strong>1.38</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1644</td><td>5.23</td><td>0.242</td><td class="der-pv">0.26</td><td class="der-bess">0.20</td><td class="der-bess">0.39</td><td class="der-diesel">0.92</td><td><strong>1.38</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1782</td><td>4.59</td><td>0.241</td><td class="der-pv">0.23</td><td class="der-bess">0.17</td><td class="der-bess">0.34</td><td class="der-diesel">0.80</td><td><strong>1.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1852</td><td>1.52</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.52</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1853</td><td>2.49</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.49</td><td class="der-diesel">0.18</td><td><strong>0.41</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1854</td><td>2.49</td><td>0.236</td><td class="der-pv">0.14</td><td class="der-bess">0.08</td><td class="der-bess">0.49</td><td class="der-diesel">0.18</td><td><strong>0.41</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1948</td><td>1.03</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.35</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1949</td><td>1.03</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.35</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1982</td><td>1.72</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>1983</td><td>1.86</td><td>0.234</td><td class="der-pv">0.12</td><td class="der-bess">0.06</td><td class="der-bess">0.64</td><td class="der-diesel">0.03</td><td><strong>0.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2008</td><td>0.89</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2009</td><td>0.89</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2010</td><td>0.89</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2032</td><td>3.27</td><td>0.237</td><td class="der-pv">0.19</td><td class="der-bess">0.11</td><td class="der-bess">0.64</td><td class="der-diesel">0.24</td><td><strong>0.54</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2033</td><td>3.27</td><td>0.237</td><td class="der-pv">0.19</td><td class="der-bess">0.11</td><td class="der-bess">0.64</td><td class="der-diesel">0.24</td><td><strong>0.54</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2034</td><td>3.27</td><td>0.237</td><td class="der-pv">0.19</td><td class="der-bess">0.11</td><td class="der-bess">0.64</td><td class="der-diesel">0.24</td><td><strong>0.54</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2078</td><td>2.87</td><td>0.237</td><td class="der-pv">0.16</td><td class="der-bess">0.09</td><td class="der-bess">0.56</td><td class="der-diesel">0.21</td><td><strong>0.47</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2079</td><td>2.87</td><td>0.237</td><td class="der-pv">0.16</td><td class="der-bess">0.09</td><td class="der-bess">0.56</td><td class="der-diesel">0.21</td><td><strong>0.47</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2146</td><td>2.10</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.73</td><td class="der-diesel">0.03</td><td><strong>0.24</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2147</td><td>2.10</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.73</td><td class="der-diesel">0.03</td><td><strong>0.24</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2212</td><td>1.03</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.35</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2293</td><td>1.49</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.51</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2294</td><td>1.49</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.51</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2295</td><td>1.49</td><td>0.234</td><td class="der-pv">0.10</td><td class="der-bess">0.05</td><td class="der-bess">0.51</td><td class="der-diesel">0.02</td><td><strong>0.17</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2315</td><td>1.33</td><td>0.234</td><td class="der-pv">0.09</td><td class="der-bess">0.05</td><td class="der-bess">0.46</td><td class="der-diesel">0.02</td><td><strong>0.15</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2344</td><td>1.70</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2345</td><td>1.70</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2346</td><td>1.70</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.59</td><td class="der-diesel">0.03</td><td><strong>0.19</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2347</td><td>1.87</td><td>0.234</td><td class="der-pv">0.12</td><td class="der-bess">0.06</td><td class="der-bess">0.64</td><td class="der-diesel">0.03</td><td><strong>0.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2348</td><td>1.87</td><td>0.234</td><td class="der-pv">0.12</td><td class="der-bess">0.06</td><td class="der-bess">0.64</td><td class="der-diesel">0.03</td><td><strong>0.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2349</td><td>1.87</td><td>0.234</td><td class="der-pv">0.12</td><td class="der-bess">0.06</td><td class="der-bess">0.64</td><td class="der-diesel">0.03</td><td><strong>0.21</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2374</td><td>1.08</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2375</td><td>1.08</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2376</td><td>1.08</td><td>0.234</td><td class="der-pv">0.07</td><td class="der-bess">0.04</td><td class="der-bess">0.37</td><td class="der-diesel">0.02</td><td><strong>0.12</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2378</td><td>1.92</td><td>0.235</td><td class="der-pv">0.12</td><td class="der-bess">0.07</td><td class="der-bess">0.66</td><td class="der-diesel">0.03</td><td><strong>0.22</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2379</td><td>2.03</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.70</td><td class="der-diesel">0.03</td><td><strong>0.23</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2471</td><td>1.98</td><td>0.235</td><td class="der-pv">0.13</td><td class="der-bess">0.07</td><td class="der-bess">0.68</td><td class="der-diesel">0.03</td><td><strong>0.22</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2503</td><td>0.89</td><td>0.234</td><td class="der-pv">0.06</td><td class="der-bess">0.03</td><td class="der-bess">0.31</td><td class="der-diesel">0.01</td><td><strong>0.10</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2504</td><td>1.79</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.62</td><td class="der-diesel">0.03</td><td><strong>0.20</strong></td><td>PV, BESS, Diesel</td></tr>
+<tr><td>2505</td><td>1.79</td><td>0.234</td><td class="der-pv">0.11</td><td class="der-bess">0.06</td><td class="der-bess">0.62</td><td class="der-diesel">0.03</td><td><strong>0.20</strong></td><td>PV, BESS, Diesel</td></tr>
+</table>
+</body></html>

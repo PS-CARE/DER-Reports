@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DER Implementation Reports - Supplementary Materials</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .summary-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .summary-box a {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #3498db;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .summary-box a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        .cluster-1 { border-left: 4px solid #e8f5e8; }
+        .cluster-2 { border-left: 4px solid #e8f0ff; }
+        .cluster-3 { border-left: 4px solid #fff0e8; }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white !important;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+            text-decoration: none;
+        }
+        ul {
+            line-height: 1.8;
+        }
+        .info-box {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #90caf9;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔋 Microgrid DER Implementation - Interactive Supplementary Reports</h1>
+        <p class="subtitle">Supplementary Materials for: "Network Topology-Aware DER Placement and Sizing for Distribution System Resilience Enhancement"</p>
+        
+        <div class="info-box">
+            <strong>📘 About These Reports:</strong> Interactive HTML reports providing comprehensive node-by-node analysis of Distributed Energy Resource (DER) implementation across three microgrid clusters under progressive N-k contingency scenarios.
+        </div>
+
+        <h2>📂 Cluster Reports by Contingency Level</h2>
+        <p>Select a specific cluster-contingency combination for detailed node-by-node analysis:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Cluster</th>
+                    <th>Nodes</th>
+                    <th>N-1 Contingency</th>
+                    <th>N-2 Contingency</th>
+                    <th>N-3 Contingency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cluster-1">
+                    <td><strong>Cluster 1</strong></td>
+                    <td>669</td>
+                    <td><a href="cluster_1_n1_der_report.html" class="btn">View Report</a></td>
+                    <td><a href="cluster_1_n2_der_report.html" class="btn">View Report</a></td>
+                    <td><a href="cluster_1_n3_der_report.html" class="btn">View Report</a></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td><strong>Cluster 2</strong></td>
+                    <td>1,119</td>
+                    <td><a href="cluster_2_n1_der_report.html" class="btn">View Report</a></td>
+                    <td><a href="cluster_2_n2_der_report.html" class="btn">View Report</a></td>
+                    <td><a href="cluster_2_n3_der_report.html" class="btn">View Report</a></td>
+                </tr>
+                <tr class="cluster-3">
+                    <td><strong>Cluster 3</strong></td>
+                    <td>735</td>
+                    <td><a href="cluster_3_n1_der_report.html" class="btn">View Report</a></td>
+                    <td><a href="cluster_3_n2_der_report.html" class="btn">View Report</a></td>
+                    <td><a href="cluster_3_n3_der_report.html" class="btn">View Report</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📋 What's Included in Each Report</h2>
+        <ul>
+            <li><strong>Implementation Summary:</strong> Total DER capacity by technology (PV, BESS, Diesel)</li>
+            <li><strong>Cluster Information:</strong> Node count, total load, and load classification breakdown
+                <ul>
+                    <li>Emergency loads</li>
+                    <li>Critical/Industrial loads</li>
+                    <li>Commercial loads</li>
+                    <li>Residential loads</li>
+                </ul>
+            </li>
+            <li><strong>Node-by-Node Analysis:</strong> Detailed table with:
+                <ul>
+                    <li>Unserved load calculations</li>
+                    <li>TACDS (Topology-Aware Criticality and Demand Scaling) factors</li>
+                    <li>Individual DER capacity allocations (PV, BESS power/energy, Diesel)</li>
+                    <li>Technology deployment mix per node</li>
+                </ul>
+            </li>
+            <li><strong>Technology Mix Validation:</strong> Comparison of actual vs. expected technology distributions</li>
+        </ul>
+
+        <h2>📊 Key Findings Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cluster</th>
+                    <th>Contingency</th>
+                    <th>PV (kW)</th>
+                    <th>BESS (kW)</th>
+                    <th>BESS (kWh)</th>
+                    <th>Diesel (kW)</th>
+                    <th>Total (kW)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cluster-1">
+                    <td rowspan="3"><strong>Cluster 1</strong></td>
+                    <td>N-1</td>
+                    <td>15.0</td>
+                    <td>8.6</td>
+                    <td>65.5</td>
+                    <td>14.1</td>
+                    <td><strong>37.8</strong></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>N-2</td>
+                    <td>40.1</td>
+                    <td>23.1</td>
+                    <td>145.1</td>
+                    <td>37.9</td>
+                    <td><strong>101.2</strong></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>N-3</td>
+                    <td>58.7</td>
+                    <td>33.8</td>
+                    <td>279.9</td>
+                    <td>55.8</td>
+                    <td><strong>148.3</strong></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td rowspan="3"><strong>Cluster 2</strong></td>
+                    <td>N-1</td>
+                    <td>25.1</td>
+                    <td>13.9</td>
+                    <td>114.6</td>
+                    <td>17.4</td>
+                    <td><strong>56.5</strong></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td>N-2</td>
+                    <td>67.1</td>
+                    <td>37.2</td>
+                    <td>278.5</td>
+                    <td>46.6</td>
+                    <td><strong>150.9</strong></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td>N-3</td>
+                    <td>98.0</td>
+                    <td>54.4</td>
+                    <td>515.8</td>
+                    <td>68.2</td>
+                    <td><strong>220.6</strong></td>
+                </tr>
+                <tr class="cluster-3">
+                    <td rowspan="3"><strong>Cluster 3</strong></td>
+                    <td>N-1</td>
+                    <td>16.1</td>
+                    <td>9.1</td>
+                    <td>70.4</td>
+                    <td>13.9</td>
+                    <td><strong>39.1</strong></td>
+                </tr>
+                <tr class="cluster-3">
+                    <td>N-2</td>
+                    <td>43.1</td>
+                    <td>24.4</td>
+                    <td>176.4</td>
+                    <td>37.2</td>
+                    <td><strong>104.7</strong></td>
+                </tr>
+                <tr class="cluster-3">
+                    <td>N-3</td>
+                    <td>63.1</td>
+                    <td>35.7</td>
+                    <td>329.5</td>
+                    <td>54.5</td>
+                    <td><strong>153.3</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p><strong>Contact:</strong> For questions about these supplementary materials, please contact the corresponding author.</p>
+            <p><em>Generated: October 2025 | Last Updated: 10/14/2025</em></p>
+        </div>
+    </div>
+</body>
+</html>
